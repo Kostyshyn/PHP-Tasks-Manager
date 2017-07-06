@@ -43,21 +43,32 @@ section {
     width: 100%;
     border-bottom: 1px solid grey;
     margin-bottom: 20px;
+    overflow-y: scroll;
 }
 .task {
+    position: relative;
     background-color: white;
     width: 100%;
     border-radius: 5px;
     height: 50px;
     margin-bottom: 10px;
     padding: 0px 10px;
+    padding-right: 70px;
     font-size: 20px;
     color: grey;
     line-height: 50px;
     list-style-type: none;
 }
+.task p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.task p.done1 {
+    text-decoration: line-through;
+}
 form {
-    
+    position: relative;
 }
 input {
     width: 100%;
@@ -65,6 +76,28 @@ input {
     border: none;
     height: 40px;
     border-radius: 5px; 
+    padding: 15px;
+    font-size: 20px;
+    color: grey;
+    position: relative;
+    padding-left: 35px;
+}
+.input-pen {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-image: url(../image/create.png);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    opacity: .3;
+    transition: all .2s;
+    position: absolute;
+    z-index: 9999; 
+    top: 10px;
+    left: 10px;
+}
+input:focus ~ .input-pen {
+    opacity: 1;
 }
 button.button {
     margin-top: 20px;
@@ -76,4 +109,38 @@ button.button {
     height: 34px;
     margin-top: 20px;
     float: right;
+}
+.delete {
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-image: url(../image/clear.png);
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-size: cover;
+	background-position: center;
+    opacity: .3;
+    transition: all .2s; 
+}
+.delete:hover {
+    opacity: 1;
+}
+.check {
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 50px;
+    background-image: url(../image/checked.png);
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-size: cover;
+	background-position: center;
+    opacity: .3;
+    transition: all .2s; 
+}
+.check:hover {
+    opacity: 1;
 }

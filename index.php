@@ -19,19 +19,13 @@
         <section>
             <div class="tasks">
                 <ul>
-                    <li class="task">
-                        Hello
-                    </li>
-                    <li class="task">
-                        Hello
-                    </li>
+                    
                 </ul>
             </div>
             <div class="form">
                 <form>
-                
                     <input type="text" id="newTask">
-                    
+                    <span class="input-pen"></span>  
                     <button class="button">Add</button>
                     <span class="response"></span>
                 

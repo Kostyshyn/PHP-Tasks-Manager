@@ -46,7 +46,7 @@
             $data;
             $sql = "INSERT INTO `todos` (task) VALUES ('". $task ."')";
             $result = $this->connection->query($sql);
-            if ($this->connection->num_rows > 0){
+            if ($this->connection->affected_rows > 0){
                 $id = $this->connection->insert_id;
                 $insert_sql = "SELECT * FROM `todos` WHERE `id`=" . $id;
                 $res = $this->connection->query($insert_sql);
@@ -64,7 +64,7 @@
                 $data;
                 $sql = "DELETE FROM `todos` WHERE `id`=" . $id;
                 $result = $this->connection->query($sql);
-                if ($this->connection->num_rows > 0){
+                if ($this->connection->affected_rows > 0){
                     $data = "Deleted";
                     return $data;
                 } else {
