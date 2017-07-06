@@ -12,15 +12,10 @@
     <body>
         
         <?php
-
-            require "database/database.php";
         
-            $db = new DataBase();
-        
-            echo "<hr>";
+//            echo "<hr>";
 
         ?>
-<!--
         <section>
             <div class="tasks">
                 <ul>
@@ -43,7 +38,6 @@
                 </form>
             </div>
         </section>
--->
         <script src="public/js/index.js"></script>
     </body>
 </html>
